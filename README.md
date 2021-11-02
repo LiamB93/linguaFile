@@ -37,27 +37,7 @@ Derived from the word "linguaphile" which is a person who loves learning or stud
 <https://whimsical.com/linguafile-4mB6qsCFoeqfKcQG8FFy5b>
 
 #### Component Architecture
-
-src
-|____ assets/
-        |__ fonts
-        |__ photos
-|____ components/
-        |__ Nav.jsx
-        |__ Footer.jsx
-        |__ Layout.jsx
-        |__ Main.jsx
-|____ screens/
-        |__ Login.jsx
-        |__ SignUp.jsx
-        |__ Create.jsx
-        |__ Edit.jsx
-        |__ Details.jsx
-        |__ Languages.jsx
-        |__ Words.jsx
-|_____ service/
-        |__ apiConfig.js
-        |__ auth.js
+![Component Architecture](componentArchitecture.png "Title")[H]
 
 ## Server (Back End)
 
