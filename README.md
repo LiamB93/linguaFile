@@ -39,6 +39,29 @@ Derived from the word "linguaphile" which is a person who loves learning or stud
 #### Component Architecture
 ![Component Architecture](componentArchitecture.png "Title")[H]
 
+#### Time Estimates
+|Task            |Priority|Est. Time    |Real Time    |
+|----------------|--------|-------------|-------------|
+|Set up models   |  H     |    1hr      |             |
+|Add seed data   |  H     |    1hr      |             |
+|Set up schema   |  H     |    .5hr     |             |
+|Set up controllers| H    |     1hr     |             |
+|Set up routes   |   H    |     1hr     |             |
+|Set up auth     |   H    |     2hr     |             |
+|Test routes/auth|   H    |     1.5hr   |             |
+|Create client   |   H    |     .5hr    |             |
+|Create forms    |   H    |     3hr     |             |
+|Create main     |  H     |     2hr     |             |
+|Create language screen|H |     2hr     |             |
+|Create Word screen|   H  |     2hr     |             |
+|Word details    |  H     |     2hr     |             |
+|Layout          |  H     |     2hr     |             |
+|Modals          | M      |     1.5hr   |             |
+|Sorting         | M      |     2hr     |             |
+|Test front-end  |  H     |     2hr     |             |
+|Styling         | H      |    8 hr     |             |
+Total            |        |    35hr     |             |
+
 ## Server (Back End)
 
 #### ERD Model
@@ -46,8 +69,8 @@ Derived from the word "linguaphile" which is a person who loves learning or stud
 
 ## Post-MVP
 
--Add sound bytes for pronunctiation
--Develop a quiz for studying
+- Add sound bytes for pronunctiation
+- Develop a quiz for studying
 
 
 
