@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :languages, only: :index
+  resources :languages, only: [:index, :show]
   resources :words
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'

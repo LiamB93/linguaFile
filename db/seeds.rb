@@ -52,3 +52,22 @@ puts "#{Word.count} words  created"
 @coragem.languages << @portuguese
 @formiga.languages << @portuguese
 
+@spanish.words << @computadora
+@spanish.words << @riqueza
+@spanish.words << @sinceridad
+@spanish.words << @lluvia
+
+@italian.words << @piatto
+@italian.words << @formaggio
+@italian.words << @zia
+@italian.words << @macchina
+
+
+@sotaque.languages << @portuguese
+@devagar.languages << @portuguese
+@coragem.languages << @portuguese
+@formiga.languages << @portuguese
+
+
+
+

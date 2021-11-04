@@ -12,6 +12,7 @@ class WordsController < ApplicationController
 
   # GET /words/1
   def show
+    
     render json: @word, include: :languages
   end
 
@@ -62,6 +63,6 @@ class WordsController < ApplicationController
   
   # Only allow a list of trusted parameters through.
   def word_params
-    params.require(:word).permit(:name, :user_id)
+    params.require(:word).permit(:name, :user_id, :term, :example, :img_url, :translation)
   end
 end
