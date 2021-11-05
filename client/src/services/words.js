@@ -10,8 +10,8 @@ export const getOneWord = async (id) => {
   return resp.data;
 };
 
-export const postWord = async (wordData) => {
-  const resp = await api.post('/words', { word: wordData });
+export const postWord = async (id, wordData) => {
+  const resp = await api.post(`/languages/${id}`, { word: wordData });
   return resp.data;
 };
 

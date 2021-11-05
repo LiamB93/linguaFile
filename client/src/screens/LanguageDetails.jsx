@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getOneLanguage } from '../services/languages';
 
 export default function LanguageDetails(props) {
@@ -18,10 +18,17 @@ export default function LanguageDetails(props) {
 
   return (
     <div>
-      <h3>{language?.name}</h3>
+      <h1>{language?.name}</h1>
       {language?.words.map((word) => (
-        <p key={word.id}>{word.term}</p>
+        <div className="word-container">
+          <h2 key={word.id}>{word.term}</h2>
+          <p>{word.example}</p>
+          <img src={word.img_url} />
+        </div>
       ))}
+      <Link to='/languages/new-word'>
+        <button>create</button>
+      </Link>
     </div>
   )
 }
