@@ -45,7 +45,7 @@ export default function WordCreate(props) {
 
       <select
         placeholder="language"
-        name="language_id"
+        name='language_id'
         value={formData.language_id}
         required
         onChange={handleChange}

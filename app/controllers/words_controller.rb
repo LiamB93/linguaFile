@@ -32,7 +32,10 @@ class WordsController < ApplicationController
 
   # PATCH/PUT /words/1
   def update
+    @word = Word.new(word_params)
+    @word.user = @current_user
     if @word.update(word_params)
+     
       render json: @word
     else
       render json: @word.errors, status: :unprocessable_entity

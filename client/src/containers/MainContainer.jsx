@@ -43,19 +43,20 @@ export default function MainContainer() {
 
   const handleWordUpdate = async (id, formData) => {
     const newWord = await putWord(id, formData);
+
     setWords((prevState) =>
       prevState.map((word) => {
         return word.id === Number(id) ? newWord : word;
       })
     );
-    history.push(`/languages/${FormData.language_id}`);
+    history.push(`/languages/${formData.language_id}`);
   };
 
 
   return (
     <Switch>
-      <Route path='/languages/edit-word'>
-        <WordEdit languages={languages} handleWordUpdate={handleWordUpdate} />
+      <Route path='/languages/edit-word/:id'>
+        <WordEdit languages={languages} handleWordUpdate={handleWordUpdate} words={words} />
       </Route>
       <Route path='/languages/new-word'>
         <WordCreate handleWordCreate={handleWordCreate} languages={languages} />
