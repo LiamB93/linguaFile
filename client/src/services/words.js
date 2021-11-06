@@ -16,7 +16,7 @@ export const postWord = async (id, wordData) => {
 };
 
 export const putWord = async (id, wordData) => {
-  const resp = await api.put(`/words/${id}`, { word: wordData });
+  const resp = await api.put(`/languages/${id}`, { word: wordData });
   return resp.data;
 };
 

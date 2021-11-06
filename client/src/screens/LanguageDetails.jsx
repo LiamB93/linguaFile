@@ -24,6 +24,9 @@ export default function LanguageDetails(props) {
           <h2 key={word.id}>{word.term}</h2>
           <p>{word.example}</p>
           <img src={word.img_url} />
+          <Link to='/languages/edit-word'>
+            <button>Edit Word</button>
+          </Link>
         </div>
       ))}
       <Link to='/languages/new-word'>

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+
+.logo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  font-size: 50px;
+  padding-right: 100px;
+}
+nav {
+  font-family: "Mohave";
+  background-color: #D2700D;
+  display: flex;
+  justify-content: space-evenly;
+  height: 150px;
+  border-radius: 1%;
+  box-shadow: 1px 1px 2px 0.3px #cecece;
+  overflow: hidden;
+}
+.current-user {
+  
+  justify-content: flex-end;
+}
+.button {
+  height: 30px;
+  width: 100px;
+  border-radius: 5%;
+  background-color: #FFE9CF;
+}
+
+.button:hover{
+  background-color: #63BAAB;
+}
+
+.logo:hover{
+  background-color: #63BAAB;
+}

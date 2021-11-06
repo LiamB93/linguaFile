@@ -7,6 +7,7 @@ import WordCreate from "../screens/WordCreate";
 import Words from "../screens/Words"
 import Languages from "../screens/Languages";
 import LanguageDetails from "../screens/LanguageDetails";
+import WordEdit from "../screens/WordEdit";
 
 
 export default function MainContainer() {
@@ -40,12 +41,24 @@ export default function MainContainer() {
     setWords((prevState) => prevState.filter((word) => word.id !== id));
   };
 
+  const handleWordUpdate = async (id, formData) => {
+    const newWord = await putWord(id, formData);
+    setWords((prevState) =>
+      prevState.map((word) => {
+        return word.id === Number(id) ? newWord : word;
+      })
+    );
+    history.push(`/languages/${FormData.language_id}`);
+  };
 
 
   return (
     <Switch>
+      <Route path='/languages/edit-word'>
+        <WordEdit languages={languages} handleWordUpdate={handleWordUpdate} />
+      </Route>
       <Route path='/languages/new-word'>
-        <WordCreate handleWordCreate={handleWordCreate} />
+        <WordCreate handleWordCreate={handleWordCreate} languages={languages} />
       </Route>
       <Route path='/languages/:id'>
         <LanguageDetails languages={languages} />
