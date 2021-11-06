@@ -1,0 +1,11 @@
+.form-container{
+  
+  justify-content: center;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  place-items: start;
+  justify-content: center;
+}

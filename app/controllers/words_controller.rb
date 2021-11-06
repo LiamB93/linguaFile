@@ -18,9 +18,12 @@ class WordsController < ApplicationController
 
   # POST /words
   def create
+    
     @word = Word.new(word_params)
     @word.user = @current_user
     if @word.save
+      @language = Language.find(params[:language_id])
+      @language.words << @word
       render json: @word, status: :created
     else
       render json: @word.errors, status: :unprocessable_entity
@@ -29,7 +32,10 @@ class WordsController < ApplicationController
 
   # PATCH/PUT /words/1
   def update
+    @word = Word.new(word_params)
+    @word.user = @current_user
     if @word.update(word_params)
+     
       render json: @word
     else
       render json: @word.errors, status: :unprocessable_entity
