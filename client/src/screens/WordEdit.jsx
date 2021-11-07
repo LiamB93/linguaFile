@@ -42,7 +42,7 @@ export default function WordEdit(props) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        handleWordUpdate(id, formData);
+        handleWordUpdate(formData.language_id, id, formData);
       }}
     >
       <h1>Edit Word</h1>
