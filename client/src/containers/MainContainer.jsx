@@ -41,15 +41,15 @@ export default function MainContainer() {
     setWords((prevState) => prevState.filter((word) => word.id !== id));
   };
 
-  const handleWordUpdate = async (id, formData) => {
-    const newWord = await putWord(id, formData);
+  const handleWordUpdate = async (language_id, id, formData) => {
+    const newWord = await putWord(language_id, id, formData);
 
     setWords((prevState) =>
       prevState.map((word) => {
         return word.id === Number(id) ? newWord : word;
       })
     );
-    history.push(`/languages/${formData.language_id}`);
+    history.push(`/languages/${language_id}`);
   };
 
 
