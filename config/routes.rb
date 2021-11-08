@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: :create
   post '/languages/:language_id', to: 'words#create'
   put '/languages/:language_id/words/:id', to: 'words#update'
+  # delete '/languages/:language_id/words/:id' to: 'words#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

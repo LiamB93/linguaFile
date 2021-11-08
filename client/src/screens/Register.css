@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
 
 
-.form-container{
+.register-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   
 }
 
-.login-form{
+.register-form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,10 +21,22 @@
   width: 250px;
   
   
+  
 
 }
 .input {
-  border-radius: 5%;
- 
+  border-radius: .5em;
+  /* align-content: center; */
   
+}
+button {
+  font-family: Mohave;
+  text-decoration: bold;
+  margin-bottom: 20px;
+  border-radius: .5em;
+}
+
+button:hover{
+  background-color: #63BAAB;
+  color: white;
 }

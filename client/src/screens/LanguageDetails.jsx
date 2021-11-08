@@ -5,7 +5,7 @@ import { getOneLanguage } from '../services/languages';
 export default function LanguageDetails(props) {
   const [language, setLanguage] = useState(null);
   const { id } = useParams();
-  const { languages } = props
+  const { languages, words, handleWordDelete } = props
 
   useEffect(() => {
     const fetchSingleLanguage = async () => {
@@ -27,11 +27,13 @@ export default function LanguageDetails(props) {
           <Link to={`/languages/edit-word/${word.id}`}>
             <button>Edit Word</button>
           </Link>
+          <button onClick={() => handleWordDelete(word.id)}>delete</button>
         </div>
       ))}
       <Link to='/languages/new-word'>
         <button>create</button>
       </Link>
+
     </div>
   )
 }

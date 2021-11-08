@@ -20,8 +20,8 @@ export const putWord = async (language_id, id, wordData) => {
   return resp.data;
 };
 
-export const deleteWord = async (id) => {
-  const resp = await api.delete(`/words/${id}`);
+export const deleteWord = async (language_id, id) => {
+  const resp = await api.delete(`/languages/${language_id}/words/${id}`);
   return resp;
 };
 
