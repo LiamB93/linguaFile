@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+
+
+.create-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mohave";
+  padding-top: 50px;
+  
+  
+}
+.create-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:#63BAAB;
+  border-radius: 3%;
+  width: 250px;
+}
+input {
+  border-radius: .5em;
+  /* align-content: center; */
+  
+}
+button {
+  font-family: Mohave;
+  text-decoration: bold;
+  margin-bottom: 20px;
+  border-radius: .5em;
+}
+
+button:hover{
+  background-color: #63BAAB;
+  color: white;
+}

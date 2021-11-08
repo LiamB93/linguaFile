@@ -42,7 +42,7 @@ nav {
   display: flex;
 }
 
-.links{
+.my-languages{
   display: flex;
   flex-direction: column;
   margin-right: 50px;
@@ -56,5 +56,8 @@ nav {
 }
 
 .logo:hover{
+  color: #63BAAB;
+}
+.my-languages:hover{
   color: #63BAAB;
 }

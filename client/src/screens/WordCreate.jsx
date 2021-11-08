@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { getAllLanguages } from '../services/languages';
+import './WordCreate.css'
 
 export default function WordCreate(props) {
   const [formData, setFormData] = useState({
@@ -21,43 +22,47 @@ export default function WordCreate(props) {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleWordCreate(formData.language_id, formData);
-      }}
-    >
-      <h1>Create Word</h1>
-      <label>
-        Word:
-        <input type='text' value={term} name='term' onChange={handleChange} /><br />
-      </label>
-      <label>
-        Translation:
-        <input type='text' value={translation} name='translation' onChange={handleChange} /><br />
-      </label>
-      Example:
-      <input type='text' value={example} name='example' onChange={handleChange} /><br />
-      <label>
-        Image:
-        <input type='text' value={img_url} name='img_url' onChange={handleChange} /><br />
-      </label>
-
-      <select
-        placeholder="language"
-        name='language_id'
-        value={formData.language_id}
-        required
-        onChange={handleChange}
+    <div className="create-container">
+      <form className="create-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleWordCreate(formData.language_id, formData);
+        }}
       >
-        <option value=''>Language</option>
-        <option value='1'>Spanish</option>
-        <option value='2'>Italian</option>
-        <option value='3'>Portuguese</option>
-      </select>
+        <h1>Create Word</h1>
+        <label>
+          <strong>Word</strong><br />
+          <input type='text' value={term} name='term' onChange={handleChange} />
+        </label>
+        <label>
+          <strong>Translation</strong><br />
+          <input type='text' value={translation} name='translation' onChange={handleChange} />
+        </label>
+        <label>
+          <strong>Example</strong><br />
+          <input type='text' value={example} name='example' onChange={handleChange} />
+        </label>
+        <label>
+          <strong>Image</strong><br />
+          <input type='text' value={img_url} name='img_url' onChange={handleChange} />
+        </label>
+        <br />
+        <select
+          placeholder="language"
+          name='language_id'
+          value={formData.language_id}
+          required
+          onChange={handleChange}
+        >
+          <option value=''>Language</option>
+          <option value='1'>Spanish</option>
+          <option value='2'>Italian</option>
+          <option value='3'>Portuguese</option>
+        </select>
 
-      <br />
-      <button>Submit</button>
-    </form>
+        <br />
+        <button>Submit</button>
+      </form>
+    </div >
   );
 }

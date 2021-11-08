@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './WordEdit.css'
 
 export default function WordEdit(props) {
   const [formData, setFormData] = useState({
@@ -39,8 +40,8 @@ export default function WordEdit(props) {
   };
 
   return (
-    <div>
-      <form
+    <div className="edit-container">
+      <form className="edit-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleWordUpdate(formData.language_id, id, formData);
@@ -48,21 +49,22 @@ export default function WordEdit(props) {
       >
         <h1>Edit Word</h1>
         <label>
-          Name:
+          <strong>Word</strong><br />
           <input type='text' name='term' value={term} onChange={handleChange} /><br />
         </label>
         <label>
-          Translation:
+          <strong>Translation</strong><br />
           <input type='text' name='translation' value={translation} onChange={handleChange} /><br />
         </label>
         <label>
-          Example:
+          <strong>Example</strong><br />
           <input type='text' name='example' value={example} onChange={handleChange} /><br />
         </label>
         <label>
-          Image:
+          <strong>Image</strong><br />
           <input type='text' name='img_url' value={img_url} onChange={handleChange} /><br />
         </label>
+        <br />
         <select
           placeholder="language"
           name='language_id'

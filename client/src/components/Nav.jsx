@@ -11,7 +11,7 @@ function Nav(props) {
       <Link to="/"><h1 className="logo">LinguaFile</h1></Link>
       {currentUser ? (
         <div className="nav">
-          <div className="links">
+          <div className="my-languages">
             {/* <Link to='/words'>Words</Link> */}
             <Link to='/languages'>My Languages</Link>
           </div>

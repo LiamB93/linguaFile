@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getOneLanguage } from '../services/languages';
+import './LanguageDetails.css'
 
 export default function LanguageDetails(props) {
   const [language, setLanguage] = useState(null);
@@ -17,7 +18,7 @@ export default function LanguageDetails(props) {
 
 
   return (
-    <div>
+    <div className="words">
       <h1>{language?.name}</h1>
       {language?.words.map((word) => (
         <div className="word-container">
@@ -27,11 +28,11 @@ export default function LanguageDetails(props) {
           <Link to={`/languages/edit-word/${word.id}`}>
             <button>Edit Word</button>
           </Link>
-          <button onClick={() => handleWordDelete(word.id)}>delete</button>
+          <button className="delete" onClick={() => handleWordDelete(word.id)}>Delete Word</button>
         </div>
       ))}
       <Link to='/languages/new-word'>
-        <button>create</button>
+        <button>Add New Word</button>
       </Link>
 
     </div>
