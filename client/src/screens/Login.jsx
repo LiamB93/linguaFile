@@ -26,10 +26,10 @@ function Login(props) {
           handleLogin(formData);
         }}
       >
-        <h3>Login</h3>
-        <label>
-          Username:
-          <input
+        <h3><strong>Login</strong></h3>
+        <label><strong>
+          Username</strong><br />
+          <input className="input"
             type='text'
             name='username'
             value={username}
@@ -37,9 +37,9 @@ function Login(props) {
           />
         </label>
         <br />
-        <label>
-          Password:
-          <input
+        <label><strong>
+          Password</strong><br />
+          <input className="input"
             type='password'
             name='password'
             value={password}
@@ -47,8 +47,8 @@ function Login(props) {
           />
         </label>
         <br />
-        <Link to='/register'>Register</Link>
-        <button>Submit</button>
+        <button>Login</button>
+        <strong><p>Not a user? <Link to='/register'>Register</Link> here</p></strong>
       </form>
     </div>
   );

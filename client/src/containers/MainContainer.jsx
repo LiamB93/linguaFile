@@ -62,7 +62,7 @@ export default function MainContainer() {
         <WordCreate handleWordCreate={handleWordCreate} languages={languages} />
       </Route>
       <Route path='/languages/:id'>
-        <LanguageDetails languages={languages} />
+        <LanguageDetails languages={languages} handleWordDelete={handleWordDelete} />
       </Route>
 
       <Route path='/words'>

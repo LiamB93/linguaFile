@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './WordEdit.css'
 
 export default function WordEdit(props) {
   const [formData, setFormData] = useState({
@@ -39,45 +40,49 @@ export default function WordEdit(props) {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleWordUpdate(formData.language_id, id, formData);
-      }}
-    >
-      <h1>Edit Word</h1>
-      <label>
-        Name:
-        <input type='text' name='term' value={term} onChange={handleChange} /><br />
-      </label>
-      <label>
-        Translation:
-        <input type='text' name='translation' value={translation} onChange={handleChange} /><br />
-      </label>
-      <label>
-        Example:
-        <input type='text' name='example' value={example} onChange={handleChange} /><br />
-      </label>
-      <label>
-        Image:
-        <input type='text' name='img_url' value={img_url} onChange={handleChange} /><br />
-      </label>
-      <select
-        placeholder="language"
-        name='language_id'
-        value={language_id}
-        required
-        onChange={handleChange}
+    <div className="edit-container">
+      <form className="edit-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleWordUpdate(formData.language_id, id, formData);
+        }}
       >
-        <option value=''>Language</option>
-        <option value='1'>Spanish</option>
-        <option value='2'>Italian</option>
-        <option value='3'>Portuguese</option>
-      </select>
+        <h1>Edit Word</h1>
+        <label>
+          <strong>Word</strong><br />
+          <input type='text' name='term' value={term} onChange={handleChange} /><br />
+        </label>
+        <label>
+          <strong>Translation</strong><br />
+          <input type='text' name='translation' value={translation} onChange={handleChange} /><br />
+        </label>
+        <label>
+          <strong>Example</strong><br />
+          <input type='text' name='example' value={example} onChange={handleChange} /><br />
+        </label>
+        <label>
+          <strong>Image</strong><br />
+          <input type='text' name='img_url' value={img_url} onChange={handleChange} /><br />
+        </label>
+        <br />
+        <select
+          placeholder="language"
+          name='language_id'
+          value={language_id}
+          required
+          onChange={handleChange}
+        >
+          <option value=''>Language</option>
+          <option value='1'>Spanish</option>
+          <option value='2'>Italian</option>
+          <option value='3'>Portuguese</option>
+        </select>
 
 
-      <br />
-      <button>Submit</button>
-    </form>
+        <br />
+        <button>Submit</button>
+      </form>
+
+    </div>
   );
 }
