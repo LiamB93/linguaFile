@@ -36,8 +36,8 @@ export default function MainContainer() {
     setWords((prevState) => [...prevState, newWord]);
     history.push(`/languages/${formData.language_id}`);
   };
-  const handleWordDelete = async (id) => {
-    await deleteWord(id);
+  const handleWordDelete = async (language_id, id) => {
+    await deleteWord(language_id, id);
     setWords((prevState) => prevState.filter((word) => word.id !== id));
   };
 

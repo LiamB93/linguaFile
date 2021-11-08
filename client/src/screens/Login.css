@@ -25,6 +25,13 @@
 }
 .input {
   border-radius: 5%;
- 
-  
-}
+ }
+
+ @media only screen and (device-width: 768px) and (device-height: 1024px){
+  .login-form{
+    margin-top: 180px;
+    width: 300px;
+    height: 300px;
+    
+  }
+ }

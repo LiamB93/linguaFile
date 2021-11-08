@@ -17,7 +17,7 @@ function Nav(props) {
           </div>
           <div className="current-user">
             <p>Welcome, {currentUser.username}</p>
-            <button className="button cursor-pointer" onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout}>Logout</button>
 
           </div>
         </div>
