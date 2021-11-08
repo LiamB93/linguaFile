@@ -40,3 +40,13 @@ button:hover{
   background-color: #63BAAB;
   color: white;
 }
+
+
+@media only screen and (device-width: 768px) and (device-height: 1024px){
+  .register-form{
+    margin-top: 140px;
+    width: 300px;
+    height: 400px;
+    
+  }
+}
